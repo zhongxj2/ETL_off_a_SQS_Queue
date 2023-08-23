@@ -7,9 +7,15 @@
 - AWS CLI
 - PSQL 
 ### Set up the enviroment
-1. git clone this repo
-2. cd $projectFile
-3. docker-compose up -d
+1. ```
+   git clone https://github.com/zhongxj2/ETL_off_a_SQS_Queue.git
+   ```
+2. ```
+   cd ETL_off_a_SQS_Queue
+   ```
+3. ```
+   docker-compose up -d
+   ```
 
 ## Commands to Test
 ### PSQL
