@@ -69,15 +69,15 @@ Replace $YourReceiptHandleHere with the actual receipt handle from the received 
 ### How would you deploy this application in production?
 I would consider deploying the application on a container orchestration platform like Kubernetes or AWS ECS for easy scaling and management. Continuous integration and continuous deployment (CI/CD) would be implemented to ensure smooth deployment cycles.
 ### What other components would you want to add to make this production ready?
--Logging: Integrate a robust logging mechanism like ELK stack (Elasticsearch, Logstash, Kibana) or Graylog.
--Monitoring: Use tools like Prometheus and Grafana.
--Backup: Regular database backups.
--Error Handling & Retries: For failed database writes or SQS reads.
--Security: Implement proper security mechanisms, encrypt sensitive data, and ensure network security.
+- Logging: Integrate a robust logging mechanism like ELK stack (Elasticsearch, Logstash, Kibana) or Graylog.
+- Monitoring: Use tools like Prometheus and Grafana.
+- Backup: Regular database backups.
+- Error Handling & Retries: For failed database writes or SQS reads.
+- Security: Implement proper security mechanisms, encrypt sensitive data, and ensure network security.
 ### How can this application scale with a growing dataset.
 By using container orchestration platforms like Kubernetes, we can easily scale up the application containers. For the database, consider using cloud-based managed databases like Amazon RDS for Postgres, which can be scaled vertically and horizontally.
 ### How can PII be recovered later on?
 The current method hashes the PII data, making it irreversible. If recovery is needed, consider using reversible encryption methods and securely store the encryption keys.
 ### What are the assumptions you made?
--The SQS messages are not too large; if they were, we'd need batch processing or streaming.
--The data structure is consistent across messages; else, more robust error handling would be needed.
+- The SQS messages are not too large; if they were, we'd need batch processing or streaming.
+- The data structure is consistent across messages; else, more robust error handling would be needed.
